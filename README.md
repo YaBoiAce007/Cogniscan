@@ -27,25 +27,15 @@ Make sure you have the following installed before you start:
 ## 1. Clone the Repository
 
 ```bash
-git clone <your-repository-url> cogniscan
+git clone https://github.com/YaBoiAce007/Cogniscan.git cogniscan
 cd cogniscan
 ```
-
-> Replace `<your-repository-url>` with the actual HTTPS or SSH URL of the Cogniscan repo.
 
 ---
 
 ## 2. Backend Setup (FastAPI + Uvicorn)
 
-### 2.1 Navigate to the backend folder
-
-```bash
-cd backend
-```
-
-> Adjust the folder name if your backend lives in a different directory.
-
-### 2.2 Create the virtual environment
+### 2.1 Create the virtual environment
 
 Create a virtual environment named `.cogniscan_ve`:
 
@@ -53,7 +43,7 @@ Create a virtual environment named `.cogniscan_ve`:
 python -m venv .cogniscan_ve
 ```
 
-### 2.3 Activate the virtual environment
+### 2.2 Activate the virtual environment
 
 **macOS / Linux:**
 ```bash
@@ -72,13 +62,13 @@ source .cogniscan_ve/bin/activate
 
 Once activated, your terminal prompt should be prefixed with `(.cogniscan_ve)`.
 
-### 2.4 Install backend dependencies
+### 2.3 Install backend dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2.5 Set up environment variables
+### 2.4 Set up environment variables
 
 Create a `.env` file in the backend directory if one doesn't already exist (the app calls `load_dotenv()` on startup):
 
@@ -88,9 +78,13 @@ touch .env
 
 Add any required environment variables to this file as needed for your setup.
 
-### 2.6 Run the FastAPI backend with Uvicorn
+### 2.5 Run the FastAPI backend with Uvicorn
 
 With the virtual environment still active:
+
+```bash
+cd backend
+```
 
 ```bash
 uvicorn main:app --host 0.0.0.0 --port 8000 --reload
@@ -107,9 +101,7 @@ Interactive API docs are automatically available at:
 - Swagger UI: `http://localhost:8000/docs`
 - ReDoc: `http://localhost:8000/redoc`
 
-### 2.7 Deactivating the virtual environment
-
-When you're done working on the backend:
+### 2.6 Deactivating the virtual environment
 
 ```bash
 deactivate
@@ -126,8 +118,6 @@ Open a **new terminal window/tab** (keep the backend running in the other one).
 ```bash
 cd frontend
 ```
-
-> Adjust the folder name if your frontend lives in a different directory.
 
 ### 3.2 Install frontend dependencies
 
@@ -163,7 +153,7 @@ Once both are running, open `http://localhost:5173` in your browser to use the C
 If you want to retrain the risk-prediction model from the dataset:
 
 ```bash
-cd backend
+cd ml
 python train.py
 ```
 
@@ -173,32 +163,6 @@ To evaluate the model on the same dataset and inspect feature importances:
 
 ```bash
 python test.py
-```
-
----
-
-## Project Structure (example)
-
-```
-cogniscan/
-├── backend/
-│   ├── .cogniscan_ve/          # virtual environment (git-ignored)
-│   ├── main.py                 # FastAPI app entrypoint
-│   ├── test_builder.py         # builds the assessment JSON
-│   ├── scoring.py              # scores submitted answers, predicts risk
-│   ├── train.py                # trains the RandomForest model
-│   ├── test.py                 # evaluates the trained model
-│   ├── content.json            # question/word pools
-│   ├── requirements.txt
-│   ├── model/
-│   │   └── model.pkl
-│   ├── data/
-│   │   └── cleaned_prototype_dataset_v1.csv
-│   └── .env
-└── frontend/
-    ├── node_modules/           # (git-ignored)
-    ├── package.json
-    └── src/
 ```
 
 ---
