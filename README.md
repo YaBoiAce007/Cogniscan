@@ -173,6 +173,14 @@ python test.py
 - **CORS errors in the browser console** — Confirm the frontend is running on `http://localhost:5173` or `http://localhost:3000`, matching the `allow_origins` list in `main.py`.
 - **`model/model.pkl` not found** — Run `python train.py` first to generate the trained model file.
 - **Port already in use** — Change the `--port` flag for Uvicorn, or stop whatever else is using port 8000 / 5173.
+- **Permission error creating/activating the venv (Linux/macOS)** — Avoid using `sudo` to create the venv. If ownership got messed up, run `sudo chown -R $USER:$USER .` in the project folder, then `chmod +x .cogniscan_ve/bin/activate`.
+- **PowerShell blocks venv activation (`running scripts is disabled on this system`)** — Run this in your current terminal session (no admin rights needed, only affects this session):
+```powershell
+  Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+```
+  Then retry `.cogniscan_ve\Scripts\Activate.ps1`.
+- **npm permission errors (Linux/macOS)** — Avoid `sudo npm install`. Fix ownership of the npm cache instead: `sudo chown -R $USER:$(id -gn $USER) ~/.npm`.
+- **npm EPERM/EBUSY errors (Windows)** — Close any editor/terminal/antivirus process locking `node_modules`, then delete `node_modules` and `package-lock.json` and run `npm install` again.
 
 ---
 
