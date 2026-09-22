@@ -1,0 +1,13 @@
+# Environment file
+.env
+
+# Virtual environment
+.cogniscan_ve/
+
+# Python bytecode cache
+__pycache__/
+*.pyc
+
+# OS/editor junk (optional but common)
+.vscode/
+.DS_Store

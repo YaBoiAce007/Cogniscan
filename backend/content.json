@@ -1,0 +1,103 @@
+{
+  "registration_words": [
+    "table", "window", "orange", "garden", "tiger",
+    "mango", "pencil", "jacket", "river", "spoon"
+  ],
+  "spell_words": [
+    "world", "plane", "chair", "bricks", "planet",
+    "bright", "monkey", "finger", "cloud", "stone"
+  ],
+  "trail_making": [
+    ["A", "C", "F", "K"],
+    ["B", "D", "G", "M", "R"],
+    ["C", "E", "H", "L", "P", "T"],
+    ["D", "F", "J", "N", "Q", "U", "X"],
+    ["G", "H", "K", "P", "V"]
+  ],
+  "sequencing": [
+    {
+      "activity_title": "Making tea",
+      "steps_in_order": [
+        "Boil water in a pot",
+        "Add tea leaves to the water",
+        "Pour the tea into a cup",
+        "Drink the tea slowly"
+      ]
+    },
+    {
+      "activity_title": "Washing hands",
+      "steps_in_order": [
+        "Turn on the tap",
+        "Wet your hands",
+        "Rub soap on your hands",
+        "Rinse off the soap",
+        "Dry your hands with a towel"
+      ]
+    },
+    {
+      "activity_title": "Brushing teeth",
+      "steps_in_order": [
+        "Pick up the toothbrush",
+        "Put paste on the brush",
+        "Brush your teeth",
+        "Rinse your mouth with water"
+      ]
+    },
+    {
+      "activity_title": "Cooking rice",
+      "steps_in_order": [
+        "Wash the rice with water",
+        "Put the rice in a pot",
+        "Cook the rice on the stove",
+        "Serve the rice on a plate"
+      ]
+    },
+    {
+      "activity_title": "Putting on shoes",
+      "steps_in_order": [
+        "Sit down on a chair",
+        "Put on your socks",
+        "Put on your shoes",
+        "Tie the shoe laces"
+      ]
+    }
+  ],
+  "caretaker": {
+    "symptoms": {
+      "forgetfulness": [
+        "Does the person repeat the same questions?",
+        "Does the person often misplace things?",
+        "Does the person forget recent talks or appointments?"
+      ],
+      "confusion": [
+        "Does the person get lost in familiar places?",
+        "Does the person mix up people?",
+        "Does the person mix up the time of day?"
+      ],
+      "personality_changes": [
+        "Is the person more irritable than before?",
+        "Is the person more withdrawn or apathetic?",
+        "Does the person act out of character?"
+      ],
+      "behavioral_problems": [
+        "Is the person agitated or aggressive?",
+        "Does the person wander?",
+        "Is the person restless at night?"
+      ]
+    },
+    "head_injury": "Has the person had a serious head injury with loss of consciousness or a hospital visit?",
+    "family_history": "Has any parent or sibling of the person had Alzheimer's or dementia?",
+    "adl": [
+      {"activity": "dressing", "question": "Can they get dressed without help?"},
+      {"activity": "toileting", "question": "Can they use the toilet without help?"},
+      {"activity": "managing_medicines", "question": "Can they take their medicines without help?"},
+      {"activity": "handling_money", "question": "Can they handle money without help?"},
+      {"activity": "preparing_meal", "question": "Can they make a simple meal without help?"}
+    ],
+    "sleep": {
+      "hours": "About how many hours does the person sleep at night?",
+      "wakeups": "How many times does the person wake up at night?",
+      "rested": "Does the person feel rested in the morning?"
+    }
+  }
+}
